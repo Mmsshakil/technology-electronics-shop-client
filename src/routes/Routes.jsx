@@ -10,6 +10,7 @@ import Error from "../pages/Error/Error";
 import AddProduct from "../pages/AddProduct/AddProduct";
 import MyCart from "../pages/MyCart/MyCart";
 import UpdateProduct from "../pages/UpdateProduct/UpdateProduct";
+import Products from "../pages/Products/Products";
 
 
 
@@ -46,6 +47,11 @@ const router = createBrowserRouter([
             {
                 path: '/addProduct',
                 element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
+            },
+            {
+                path: '/products',
+                element: <Products></Products>,
+                loader: () => fetch(`http://localhost:3000/product`)
             },
             {
                 path: '/updateProduct',
