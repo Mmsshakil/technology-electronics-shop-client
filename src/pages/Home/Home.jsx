@@ -1,14 +1,14 @@
 import { useLoaderData } from "react-router-dom";
 import Header from "../shared/Header/Header";
-import LeftSideNav from "../shared/LeftSideNav/LeftSideNav";
 import ServiceCard from "./ServiceCard";
 import BrandSlider from "../shared/Header/BrandSlider";
+import Footer from "../shared/Footer/Footer";
 
 
 const Home = () => {
 
     const service = useLoaderData();
-    console.log(service);
+    // console.log(service);
 
     return (
         <div>
@@ -19,7 +19,7 @@ const Home = () => {
                
                 {/* brands */}
                 <div className="  ">
-                    <h2 className="text-2xl font-bold font-nunito text-center my-5 text-white">Our Services</h2>
+                    <h2 className="text-2xl font-bold font-nunito text-center my-5 text-white">Our Brands</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         {
                             service?.map(aService => <ServiceCard key={aService.id} service={aService}></ServiceCard>)
@@ -60,7 +60,7 @@ const Home = () => {
                     </div>
                 </form>
             </div>
-
+            <Footer></Footer>
         </div>
     );
 };
