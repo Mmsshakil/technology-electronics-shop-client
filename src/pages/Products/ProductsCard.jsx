@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
+
 
 const ProductsCard = ({ product }) => {
 
-    const { photo, name, brand, type, price, descrip, rating } = product;
+    const { _id, photo, name, brand, type, price, descrip, rating } = product;
+
+    // console.log(_id);
 
     return (
         <div className="card w-96 bg-base-100 shadow-xl rounded-lg">
@@ -19,7 +23,9 @@ const ProductsCard = ({ product }) => {
 
                 <div className="  card-actions gap-10">
                     <button className="btn btn-outline btn-info">Details</button>
-                    <button className="btn btn-outline btn-warning">Update</button>
+                    <Link to={`/updateProducts/${_id}`}>
+                        <button className="btn btn-outline btn-warning">Update</button>
+                    </Link>
                 </div>
             </div>
         </div>
