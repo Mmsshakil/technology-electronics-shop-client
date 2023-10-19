@@ -24,7 +24,7 @@ const UpdateProduct = () => {
         const descrip = form.descrip.value;
         const rating = form.rating.value;
 
-        if(rating > 10){
+        if (rating > 10) {
             swal("Error!", "Rating must be less than 10", "error");
             return;
         }
@@ -48,7 +48,7 @@ const UpdateProduct = () => {
                     swal("Success!", "Product Updated Successfully", "success");
                     navigate(location?.state ? location.state : '/products');
                 }
-                else{
+                else {
                     swal("Error!", "Please change any data", "error");
                 }
             })
@@ -84,6 +84,8 @@ const UpdateProduct = () => {
                             <label className="label">
                                 <span className="label-text">Brand Name</span>
                             </label>
+
+
                             <input type="text" name="brand" placeholder="Enter brand name" defaultValue={brand} className="input input-bordered" required />
                         </div>
 

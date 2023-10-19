@@ -22,7 +22,11 @@ const ProductsCard = ({ product }) => {
                 </div>
 
                 <div className="  card-actions gap-10">
+
+                    <Link to={`/productDetails/${_id}`}>
                     <button className="btn btn-outline btn-info">Details</button>
+                    </Link>
+
                     <Link to={`/updateProducts/${_id}`}>
                         <button className="btn btn-outline btn-warning">Update</button>
                     </Link>
