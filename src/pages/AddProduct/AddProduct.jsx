@@ -14,6 +14,11 @@ const AddProduct = () => {
         const descrip = form.descrip.value;
         const rating = form.rating.value;
 
+        if(rating > 10){
+            swal("Error!", "Rating must be less than 10", "error");
+            return;
+        }
+
         const newProduct = { photo, name, brand, type, price, descrip, rating };
         console.log(newProduct);
 

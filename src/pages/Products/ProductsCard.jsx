@@ -8,7 +8,7 @@ const ProductsCard = ({ product }) => {
     // console.log(_id);
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl rounded-lg">
+        <div className="card w-96 p-5 bg-base-100 shadow-xl rounded-lg">
             <figure className="p-2 flex-grow">
                 <img src={photo} alt="Shoes" className="rounded-lg w-full" />
             </figure>
