@@ -50,9 +50,9 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
             },
             {
-                path: '/products',
+                path: '/products/:brand',
                 element: <Products></Products>,
-                loader: () => fetch(`https://technology-electronics-server-mu.vercel.app/product`)
+                loader: ({ params }) => fetch(`https://technology-electronics-server-mu.vercel.app/product/${params.brand}`)
             },
             {
                 path: '/updateProducts/:id',
