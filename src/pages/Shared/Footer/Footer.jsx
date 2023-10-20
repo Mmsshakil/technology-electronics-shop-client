@@ -1,11 +1,11 @@
 
-import { LuGamepad2 } from 'react-icons/lu';
+import { LuCircuitBoard } from 'react-icons/lu';
 
 const Footer = () => {
     return (
         <footer className="footer p-10 bg-base-300 my-10 text-neutral-content">
-            <aside  className=' '>
-                <div className='text-4xl text-white'><LuGamepad2></LuGamepad2></div>
+            <aside className=' '>
+                <div className='text-4xl text-white'><LuCircuitBoard></LuCircuitBoard></div>
                 <p className='text-base'>Copyright © 2023 - All right reserved</p>
             </aside>
             <nav>

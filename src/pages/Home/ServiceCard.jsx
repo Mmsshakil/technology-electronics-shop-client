@@ -9,7 +9,7 @@ const ServiceCard = ({ service }) => {
     const { img, title, details, id, price } = service;
 
     return (
-        <div  className="card card-compact w-96 bg-base-100 shadow-xl rounded-md mt-5 border border-b-gray-700">
+        <div  className="card card-compact w-80 bg-base-100 shadow-xl rounded-md mt-5 border border-b-gray-700">
 
             {/* <Link to={`/service/${id}`} className=" font-semibold"> */}
 
