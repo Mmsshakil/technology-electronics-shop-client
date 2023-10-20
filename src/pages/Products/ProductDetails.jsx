@@ -1,11 +1,59 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useLocation, useNavigate } from "react-router-dom";
+import swal from 'sweetalert';
+
 
 const ProductDetails = () => {
 
-    const product = useLoaderData();
-    const { _id, photo, name, brand, type, price, descrip, rating } = product;
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    console.log(_id);
+    const product = useLoaderData();
+    const {photo, name, brand, type, price, descrip, rating } = product;
+
+    
+
+    const handleAddToCart = () => {
+
+        const cartPhoto = photo;
+        const cartName = name;
+        const cartBrand = brand;
+        const cartType = type;
+        const cartPrice = price;
+        const cartDescrip = descrip;
+    
+        const newCart = { cartPhoto, cartName, cartBrand, cartType, cartPrice, cartDescrip };
+
+
+
+        console.log(newCart);
+
+        // sent cart data to the server
+        fetch('http://localhost:3000/cart', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newCart)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId){
+                    swal("Success!", "Add to Cart successful!", "success");
+                    navigate(location?.state ? location.state : '/cart');
+
+                }
+                else{
+                    swal("Error", "Already Added!", "warning");
+                    navigate(location?.state ? location.state : '/products');
+                    return;
+                }
+
+            })
+
+
+
+    }
 
     return (
         <div className="flex flex-col md:flex-row justify-center items-center my-5 gap-5">
@@ -29,8 +77,8 @@ const ProductDetails = () => {
                     </div>
 
                 </div>
-                <Link className="">
-                    <button className="btn btn-outline btn-accent mt-4">Add to Cart</button>
+                <Link  className="">
+                    <button onClick={handleAddToCart} className="btn btn-outline btn-accent mt-4">Add to Cart</button>
                 </Link>
             </div>
         </div>
