@@ -18,9 +18,9 @@ const Home = () => {
 
                
                 {/* brands */}
-                <div className="  ">
+                <div className=" flex flex-col items-center">
                     <h2 className="text-2xl font-bold font-nunito text-center my-5 text-white">Our Brands</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {
                             service?.map(aService => <ServiceCard key={aService.id} service={aService}></ServiceCard>)
                         }
