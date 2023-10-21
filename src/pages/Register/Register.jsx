@@ -81,7 +81,7 @@ const Register = () => {
 
 
             <div className=" w-full md:w-2/3 lg:w-1/2 mx-auto p-10 border border-emerald-500 ">
-                <h2 className="text-xl font-semibold text-center text-white">Please Register</h2>
+                <h2 className="text-xl font-semibold text-center  ">Please Register</h2>
 
                 <form onSubmit={handleRegister}>
                     <div className="form-control">

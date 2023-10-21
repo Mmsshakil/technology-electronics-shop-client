@@ -32,13 +32,13 @@ const Service = () => {
                     <div>
                         <img src={detailService?.img} alt="" />
                     </div>
-                    <div className="text-xl font-bold my-3 text-white">
+                    <div className="text-xl font-bold my-3  ">
                         {detailService?.title}
                     </div>
                     <div>
                         {detailService?.details}
                     </div>
-                    <div className="my-3 font-bold text-lg text-white">
+                    <div className="my-3 font-bold text-lg  ">
                         <h2>Price: ${detailService.price}</h2>
                     </div>
                 </div>

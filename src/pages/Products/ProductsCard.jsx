@@ -14,11 +14,11 @@ const ProductsCard = ({ product }) => {
             </figure>
             <div className="flex flex-col items-center gap-3 justify-center">
                 <div className="">
-                    <h2 className="text-lg text-white">Name: {name}</h2>
-                    <h2 className="text-lg text-white">Brand: {brand}</h2>
-                    <h2 className="text-lg text-white">Type: {type}</h2>
-                    <h2 className="text-lg text-white">Price: ${price}</h2>
-                    <h2 className="text-lg text-white">Rating: {rating}  <span className="text-base font-light text-gray-600">out of 10</span></h2>
+                    <h2 className="text-lg  ">Name: {name}</h2>
+                    <h2 className="text-lg  ">Brand: {brand}</h2>
+                    <h2 className="text-lg  ">Type: {type}</h2>
+                    <h2 className="text-lg  ">Price: ${price}</h2>
+                    <h2 className="text-lg  ">Rating: {rating}  <span className="text-base font-light text-gray-600">out of 10</span></h2>
                 </div>
 
                 <div className="  card-actions gap-10">

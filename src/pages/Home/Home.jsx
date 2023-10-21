@@ -19,8 +19,8 @@ const Home = () => {
                
                 {/* brands */}
                 <div className=" flex flex-col items-center">
-                    <h2 className="text-2xl font-bold font-nunito text-center my-5 text-white">Our Brands</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <h2 className="text-2xl font-bold font-nunito text-center my-5">Our Brands</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                         {
                             service?.map(aService => <ServiceCard key={aService.id} service={aService}></ServiceCard>)
                         }
@@ -28,8 +28,8 @@ const Home = () => {
                 </div>
             
             {/* extra part */}
-            <div className=" border rounded-md mx-auto py-14 mt-10">
-                <h2 className="text-center text-xl font-semibold text-white">Do you have any <span className="text-emerald-500 font-bold">Question</span> ?</h2>
+            <div className=" border-2 rounded-md mx-auto py-14 mt-10">
+                <h2 className="text-center text-xl font-semibold ">Do you have any <span className="text-emerald-500 font-bold">Question</span> ?</h2>
                 <form className="w-2/3 mx-auto">
                     <div className="form-control">
                         <label className="label">

@@ -7,10 +7,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        roboto : "'Roboto Mono', monospace"
+        roboto: "'Roboto Mono', monospace"
       }
     },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light", "dark"],
+  },
 }
 

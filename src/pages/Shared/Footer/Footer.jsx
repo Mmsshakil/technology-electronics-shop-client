@@ -3,9 +3,9 @@ import { LuCircuitBoard } from 'react-icons/lu';
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-base-300 my-10 text-neutral-content">
+        <footer className="footer p-10 bg-base-300 my-10 ">
             <aside className=' '>
-                <div className='text-4xl text-white'><LuCircuitBoard></LuCircuitBoard></div>
+                <div className='text-4xl'><LuCircuitBoard></LuCircuitBoard></div>
                 <p className='text-base'>Copyright © 2023 - All right reserved</p>
             </aside>
             <nav>
