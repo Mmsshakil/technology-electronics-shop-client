@@ -46,7 +46,7 @@ const UpdateProduct = () => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
                     swal("Success!", "Product Updated Successfully", "success");
-                    navigate(location?.state ? location.state : '/products');
+                    navigate(location?.state ? location.state : '/');
                 }
                 else {
                     swal("Error!", "Please change any data", "error");

@@ -1,10 +1,22 @@
 import { useLoaderData } from "react-router-dom";
 import ProductsCard from "./ProductsCard";
 import Advertise from "../Advertise/Advertise";
+import swal from "sweetalert";
+
 
 const Products = () => {
 
+    console.log(location);
+
     const products = useLoaderData();
+    console.log(products);
+
+
+    if (products.length <= 0) {
+        console.log('not available');
+        swal("Product isn't available!", "Please add product of this brand", "error");
+        
+    }
 
     return (
         <div className="flex flex-col justify-center items-center">
@@ -15,10 +27,10 @@ const Products = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {
-                    products.map(product => <ProductsCard 
+                    products.map(product => <ProductsCard
                         key={product._id}
                         product={product}
-                        ></ProductsCard>)
+                    ></ProductsCard>)
                 }
             </div>
         </div>

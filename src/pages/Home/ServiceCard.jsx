@@ -7,7 +7,7 @@ const ServiceCard = ({ service }) => {
    
 
     const { brand, img, title, details, id, price } = service;
-    console.log(brand);
+    // console.log(brand);
 
     return (
         <div  className="card card-compact w-80 bg-base-100 shadow-xl rounded-md mt-5 border border-b-gray-700">
