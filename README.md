@@ -4,5 +4,7 @@
 3. Anyone can log in with email, password, or Google.
 4. If you log in, you can update any product and add new ones.
 5. Here, you can also add any product to the cart, and if you don't like it, you can delete it from the cart page.
+6. Intel brand don't have any product.
 
-# Live Link : https://technology-electronics-2d25d.web.app/
+# Live Link : 
+https://technology-electronics-2d25d.web.app/
