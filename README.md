@@ -7,7 +7,7 @@
 4. If you log in, you can update any product and add new ones.
 5. Here, you can also add any product to the cart, and if you don't like it, you can delete it from the cart page.
 
-# technology
+# library & technology
 1. React
 2. Node.js
 3. Firebase
